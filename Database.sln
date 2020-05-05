@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{118E25AE-A0AD-45E9-8E15-74AC76FEE2C4}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GMBData", "Database\GMBData.sqlproj", "{118E25AE-A0AD-45E9-8E15-74AC76FEE2C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
