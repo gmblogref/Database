@@ -9,6 +9,7 @@
 	,@City              VARCHAR(50) 
 	,@State             VARCHAR(2)  
 	,@Zip               VARCHAR(10)
+	,@BirthDate			DATE
 )
 AS
 BEGIN
@@ -25,6 +26,7 @@ BEGIN
 		,[City]				= @City
 		,[State]			= @State
 		,[Zip]				= @Zip
+		,[BirthDate]		= @BirthDate
 		,[LastModifiedOn]	= GETDATE()
 	WHERE
 		[UserAccountsId] = @UserAccountsId

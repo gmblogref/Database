@@ -11,6 +11,7 @@ BEGIN
 		,[City]
 		,[State]
 		,[Zip]
+		,[BirthDate]
 	FROM
 		[dbo].[UserAccounts]
 END

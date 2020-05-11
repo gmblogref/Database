@@ -9,8 +9,9 @@
     ,[City]             VARCHAR(50)     CONSTRAINT [DF_UserAccounts_City]           DEFAULT ('') NOT NULL 
     ,[State]            VARCHAR(2)      CONSTRAINT [DF_UserAccounts_State]          DEFAULT ('') NOT NULL 
     ,[Zip]              VARCHAR(10)     CONSTRAINT [DF_UserAccounts_Zip]            DEFAULT ('') NOT NULL 
-    ,[CreatedOn]        DATETIME        NOT NULL
-    ,[LastModifiedOn]   DATETIME        NOT NULL
+    ,[BirthDate]        DATE            NULL
+    ,[CreatedOn]        DATETIME2(7)    NOT NULL
+    ,[LastModifiedOn]   DATETIME2       NOT NULL
     ,CONSTRAINT [PK_UserAccounts] PRIMARY KEY CLUSTERED ([UserAccountsId] ASC)
 );
 
