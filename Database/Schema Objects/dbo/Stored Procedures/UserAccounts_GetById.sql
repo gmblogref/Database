@@ -15,7 +15,7 @@ BEGIN
 		,[State]
 		,[Zip]  
 		,[CreatedOn]
-		,[LastUpdated]
+		,[LastModifiedOn]
 	FROM
 		[dbo].[UserAccounts]
 	WHERE
