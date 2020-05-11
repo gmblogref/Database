@@ -38,6 +38,8 @@ BEGIN
 		, @City     
 		, @State    
 		, @Zip
+		, GETDATE()
+		, GETDATE()
 	)
 
 	SELECT @UserAccountsId = SCOPE_IDENTITY()
