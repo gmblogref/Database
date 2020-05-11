@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[UserAccounts]
 (
 	[UserAccountsId]    INT             IDENTITY (1, 1) NOT FOR REPLICATION NOT NULL,
-    [UserName]          VARCHAR(50)     CONSTRAINT [DF_UserAccounts_UserName]          DEFAULT ('') NOT NULL,
+    [UserName]          VARCHAR(50)     CONSTRAINT [DF_UserAccounts_UserName]       DEFAULT ('') NOT NULL,
     [FirstName]         VARCHAR(150)    NULL, 
     [LastName]          VARCHAR(150)    NULL, 
     [Email]             VARCHAR(50)     CONSTRAINT [DF_UserAccounts_Email]          DEFAULT ('') NOT NULL, 
