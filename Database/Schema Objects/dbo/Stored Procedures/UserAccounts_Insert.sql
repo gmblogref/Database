@@ -8,6 +8,7 @@
 	, @City				VARCHAR(50)
 	, @State			VARCHAR(2)
 	, @Zip				VARCHAR(10)
+	, @BirthDate		DATE
 	, @UserAccountsId	INT OUTPUT
 )
 
@@ -25,6 +26,9 @@ BEGIN
 		, [City]     
 		, [State]    
 		, [Zip]
+		, [BirthDate]
+		, [CreatedOn]
+		, [LastModifiedOn]
 	)
 	VALUES
 	(
@@ -36,6 +40,9 @@ BEGIN
 		, @City     
 		, @State    
 		, @Zip
+		, @BirthDate
+		, GETDATE()
+		, GETDATE()
 	)
 
 	SELECT @UserAccountsId = SCOPE_IDENTITY()

@@ -10,9 +10,8 @@ BEGIN
 		,[Address]
 		,[City]
 		,[State]
-		,[Zip]  
-		,[CreatedOn]
-		,[LastUpdated]
+		,[Zip]
+		,[BirthDate]
 	FROM
 		[dbo].[UserAccounts]
 END
