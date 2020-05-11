@@ -13,9 +13,8 @@ BEGIN
 		,[Address]
 		,[City]
 		,[State]
-		,[Zip]  
-		,[CreatedOn]
-		,[LastModifiedOn]
+		,[Zip]
+		,[BirthDate]
 	FROM
 		[dbo].[UserAccounts]
 	WHERE

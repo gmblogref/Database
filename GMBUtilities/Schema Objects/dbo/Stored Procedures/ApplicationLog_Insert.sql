@@ -2,7 +2,7 @@
 (
 	 @AppId					SMALLINT
 	,@ErrorLevel			NVARCHAR(50)
-	,@ThrownException		NVARCHAR(4000)
+	,@ExceptionMessge		NVARCHAR(4000)
 	,@StackTrace			NVARCHAR(4000)
 )
 AS
@@ -14,7 +14,7 @@ BEGIN
 	(
 		 [AppId] 
 		,[ErrorLevel]
-		,[ThrownException] 
+		,[ExceptionMessge] 
 		,[StackTrace]    
 		,[LogDate]
 	)
@@ -22,7 +22,7 @@ BEGIN
 	(
 		 @AppId				
 		,@ErrorLevel		
-		,@ThrownException	
+		,@ExceptionMessge	
 		,@StackTrace	  
 		,GETDATE()
 	)
