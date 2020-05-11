@@ -25,6 +25,8 @@ BEGIN
 		, [City]     
 		, [State]    
 		, [Zip]
+		, [CreatedOn]
+		, [LastModifiedOn]
 	)
 	VALUES
 	(

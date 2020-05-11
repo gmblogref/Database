@@ -17,15 +17,15 @@ BEGIN
 	UPDATE
 		[dbo].[UserAccounts]
 	SET
-		 [UserName]		= @UserName
-		,[FirstName]	= @FirstName
-		,[LastName]		= @LastName
-		,[Email]		= @Email
-		,[Address]		= @Address
-		,[City]			= @City
-		,[State]		= @State
-		,[Zip]			= @Zip
-		,[LastUpdated]	= GETDATE()
+		 [UserName]			= @UserName
+		,[FirstName]		= @FirstName
+		,[LastName]			= @LastName
+		,[Email]			= @Email
+		,[Address]			= @Address
+		,[City]				= @City
+		,[State]			= @State
+		,[Zip]				= @Zip
+		,[LastModifiedOn]	= GETDATE()
 	WHERE
-		UserAccountsId = @UserAccountsId
+		[UserAccountsId] = @UserAccountsId
 END
