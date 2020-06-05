@@ -1,4 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[UserAccounts_Insert]
+﻿/*
+	https://github.com/jonwagner/Insight.Database/wiki/Identity-Inserts
+*/
+
+CREATE PROCEDURE [dbo].[UserAccounts_Insert]
 (
 	  @UserName			VARCHAR(50)
 	, @FirstName		VARCHAR(150)
@@ -9,7 +13,6 @@
 	, @State			VARCHAR(2)
 	, @Zip				VARCHAR(10)
 	, @BirthDate		DATE
-	, @UserAccountsId	INT OUTPUT
 )
 
 AS
@@ -30,6 +33,7 @@ BEGIN
 		, [CreatedOn]
 		, [LastModifiedOn]
 	)
+	OUTPUT Inserted.UserAccountsId
 	VALUES
 	(
 		  @UserName	
@@ -45,5 +49,4 @@ BEGIN
 		, GETDATE()
 	)
 
-	SELECT @UserAccountsId = SCOPE_IDENTITY()
 END
