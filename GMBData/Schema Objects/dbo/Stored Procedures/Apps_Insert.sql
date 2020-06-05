@@ -1,4 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[Apps_Insert]
+﻿/*
+	https://github.com/jonwagner/Insight.Database/wiki/Identity-Inserts
+*/
+
+CREATE PROCEDURE [dbo].[Apps_Insert]
 (
 	  @AppName		VARCHAR(50)
 	, @AppDesc		VARCHAR(200)

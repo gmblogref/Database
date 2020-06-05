@@ -1,4 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[ApplicationLog_Insert]
+﻿/*
+	https://github.com/jonwagner/Insight.Database/wiki/Identity-Inserts
+*/
+
+CREATE PROCEDURE [dbo].[ApplicationLog_Insert]
 (
 	 @AppId					SMALLINT
 	,@ErrorLevel			NVARCHAR(50)

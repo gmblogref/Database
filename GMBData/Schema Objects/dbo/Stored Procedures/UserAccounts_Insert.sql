@@ -1,4 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[UserAccounts_Insert]
+﻿/*
+	https://github.com/jonwagner/Insight.Database/wiki/Identity-Inserts
+*/
+
+CREATE PROCEDURE [dbo].[UserAccounts_Insert]
 (
 	  @UserName			VARCHAR(50)
 	, @FirstName		VARCHAR(150)
