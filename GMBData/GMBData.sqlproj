@@ -11,17 +11,19 @@
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Database</RootNamespace>
-    <AssemblyName>Database</AssemblyName>
+    <RootNamespace>GMBData</RootNamespace>
+    <AssemblyName>GMBData</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetLanguage>CS</TargetLanguage>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -60,6 +62,9 @@
     <Folder Include="Schema Objects\dbo" />
     <Folder Include="Schema Objects\dbo\Tables" />
     <Folder Include="Schema Objects\dbo\Stored Procedures" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Permissions" />
+    <Folder Include="Scripts\SqlJobs" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema Objects\dbo\Tables\UserAccounts.sql" />
@@ -72,8 +77,31 @@
     <Build Include="Schema Objects\dbo\Stored Procedures\Apps_Insert.sql" />
     <Build Include="Schema Objects\dbo\Stored Procedures\Apps_GetAll.sql" />
     <Build Include="Schema Objects\dbo\Stored Procedures\Apps_Update.sql" />
+    <None Include="Scripts\Permissions\AddUserPermissions.sql" />
+    <None Include="Scripts\SqlJobs\AddCustomDefinedRoles.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="GMBData.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="ApiNetPassword">
+      <DefaultValue>ApiNetUser</DefaultValue>
+      <Value>$(SqlCmdVar__4)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="ApiNetUser">
+      <DefaultValue>ApiNetUser</DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="DatabaseSchema">
+      <DefaultValue>dbo</DefaultValue>
+      <Value>$(SqlCmdVar__2)</Value>
+    </SqlCmdVariable>
+    <SqlCmdVariable Include="ExecProcRole">
+      <DefaultValue>db_execproc</DefaultValue>
+      <Value>$(SqlCmdVar__3)</Value>
+    </SqlCmdVariable>
   </ItemGroup>
 </Project>
