@@ -18,6 +18,7 @@ BEGIN
 		,[StackTrace]    
 		,[LogDate]
 	)
+	OUTPUT Inserted.ApplicationLogId
 	VALUES
 	(
 		 @AppId				
@@ -26,4 +27,5 @@ BEGIN
 		,@StackTrace	  
 		,GETDATE()
 	)
+
 END

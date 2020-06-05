@@ -2,7 +2,6 @@
 (
 	  @AppName		VARCHAR(50)
 	, @AppDesc		VARCHAR(200)
-	, @AppsId		INT OUTPUT
 )
 AS
 BEGIN
@@ -15,6 +14,7 @@ BEGIN
 		,[CreatedOn]
 		,[LastModifiedOn]
 	)
+	OUTPUT Inserted.AppsId
 	VALUES
 	(
 		 @AppName
@@ -22,7 +22,5 @@ BEGIN
 		,GETDATE()
 		,GETDATE()
 	)
-
-	SELECT @AppsId = SCOPE_IDENTITY()
 
 END

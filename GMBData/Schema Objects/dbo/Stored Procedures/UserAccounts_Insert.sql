@@ -9,7 +9,6 @@
 	, @State			VARCHAR(2)
 	, @Zip				VARCHAR(10)
 	, @BirthDate		DATE
-	, @UserAccountsId	INT OUTPUT
 )
 
 AS
@@ -30,6 +29,7 @@ BEGIN
 		, [CreatedOn]
 		, [LastModifiedOn]
 	)
+	OUTPUT Inserted.UserAccountsId
 	VALUES
 	(
 		  @UserName	
@@ -45,5 +45,4 @@ BEGIN
 		, GETDATE()
 	)
 
-	SELECT @UserAccountsId = SCOPE_IDENTITY()
 END
