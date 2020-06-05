@@ -1,8 +1,11 @@
-﻿CREATE PROCEDURE [dbo].[Apps_Insert]
+﻿/*
+	https://github.com/jonwagner/Insight.Database/wiki/Identity-Inserts
+*/
+
+CREATE PROCEDURE [dbo].[Apps_Insert]
 (
 	  @AppName		VARCHAR(50)
 	, @AppDesc		VARCHAR(200)
-	, @AppsId		INT OUTPUT
 )
 AS
 BEGIN
@@ -15,6 +18,7 @@ BEGIN
 		,[CreatedOn]
 		,[LastModifiedOn]
 	)
+	OUTPUT Inserted.AppsId
 	VALUES
 	(
 		 @AppName
@@ -22,7 +26,5 @@ BEGIN
 		,GETDATE()
 		,GETDATE()
 	)
-
-	SELECT @AppsId = SCOPE_IDENTITY()
 
 END
