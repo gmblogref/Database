@@ -1,6 +1,8 @@
-﻿CREATE PROCEDURE [dbo].[User_Validate]
+﻿CREATE PROCEDURE [dbo].[UserAccounts_Validate]
+(
 	  @UserName	VARCHAR(50) 
 	, @Password	VARCHAR(70)
+)
 AS
 BEGIN
 
