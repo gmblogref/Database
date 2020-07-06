@@ -12,7 +12,8 @@
     ,[BirthDate]        DATE            NULL
     ,[CreatedOn]        DATETIME2(7)    NOT NULL
     ,[LastModifiedOn]   DATETIME2       NOT NULL
-    ,CONSTRAINT [PK_UserAccounts] PRIMARY KEY CLUSTERED ([UserAccountsId] ASC)
+    ,[Password]         VARCHAR(70)     NULL                                        DEFAULT (''), 
+    CONSTRAINT [PK_UserAccounts] PRIMARY KEY CLUSTERED ([UserAccountsId] ASC)
 );
 
 
