@@ -13,6 +13,7 @@ CREATE PROCEDURE [dbo].[UserAccounts_Insert]
 	, @State			VARCHAR(2)
 	, @Zip				VARCHAR(10)
 	, @BirthDate		DATE
+	, @Password			VARCHAR(70)
 )
 
 AS
@@ -32,6 +33,7 @@ BEGIN
 		, [BirthDate]
 		, [CreatedOn]
 		, [LastModifiedOn]
+		, [Password]
 	)
 	OUTPUT Inserted.UserAccountsId
 	VALUES
@@ -47,6 +49,7 @@ BEGIN
 		, @BirthDate
 		, GETDATE()
 		, GETDATE()
+		, @Password
 	)
 
 END
